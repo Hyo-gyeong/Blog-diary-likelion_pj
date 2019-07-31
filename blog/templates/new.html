@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+<style>
+form {
+    margin:60px;
+    margin-left:150px;
+}
+form > p {
+    color:red;
+}
+</style>
+</head>
+<form method="POST" enctype="multipart/form-data">
+
+        {% csrf_token%}
+        <p>* 사진 첨부 필수!</p>
+                <table>
+                    {{form.as_table}}
+                </table> 
+        <br>
+        <input style="float:right; margin-right:30px;" class="btn btn-dark" type="submit" value="제출">
+        <br>
+    </form>
+
+{% endblock %}

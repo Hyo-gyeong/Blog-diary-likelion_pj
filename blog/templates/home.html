@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<head>
+    <style>
+        .cards {
+            width:80%;
+            padding:0px;
+            margin: 0 auto; /* Added */
+            float: none; /* Added */
+            margin-bottom: 20px; /* Added */
+        }
+        img {
+            height:90%;
+            width:87% ;
+            margin:100px;
+            margin-top:10px;
+            margin-left:80px;
+        }
+        
+    </style>
+</head>
+<body>
+<section class="mb-30px">
+<div class="container">
+<div class="hero-banner">
+<div class="hero-banner__content">
+<br>
+<!-- <p style="font-family:'UhBeemysen'; font-size:30px;">Diary & Blog</p><br> -->
+
+<img src="{% static 'illust.jpeg' %}" >
+<p style="font-family:'UhBeemysen'; font-size:30px;">since 2019.7.31</p>
+</div>
+</div>
+</div>
+</section>
+</body>
+
+
+{% endblock %}
+

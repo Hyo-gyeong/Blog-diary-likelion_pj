@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+<style>
+a {
+    font-family: 'InkLipquid';
+    font-size:20px;
+    margin-right:10px;
+    color:gray;
+}
+a:hover {
+    color:black;
+    text-decoration:none;
+}
+.card {
+    margin:60px;
+    align-content:center;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.content {
+    margin:50px;
+}
+.title {
+    font-size:33px;
+}
+.date {
+    font-style:italic;
+    font-size:20px;
+}
+</style>
+</head>
+
+<br><br>
+<div class="cards">
+  <div class="card-body">
+    <img height="40%"  src="{{blog_detail.image.url}}">
+    <p class="title content" style="font-family: 'fromdamiM';">{{blog_detail.title}}<br></p>
+    <p class="body content" style="font-family: 'SDMiSaeng'; font-size:25px;">{{blog_detail.body}}<br></p>
+    <p class="date content" style="font-family:'UhBeemysen';">{{blog_detail.pub_date}}</p>
+    <a style="float:right; margin-left:20px;" href="{% url 'home' %}">홈으로</a>
+    <a style="float:right; margin-left:20px;"  href="{% url 'delete' blog_detail.id %}">삭제하기</a>
+    <a style="float:right; margin-left:20px;"  href="{% url 'edit' blog_detail.id %}">수정하기</a>
+</div>
+</div><br><br><br>
+{% endblock %}

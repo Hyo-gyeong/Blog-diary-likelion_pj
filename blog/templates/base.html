@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+ .navbar-expand-lg {
+     width:100%;
+     font-family: 'Goyang';
+     font-size:25px;
+ }
+ footer {
+     text-align:center;
+     font-family: 'UhBeemysen';
+     font-size:25px;
+ }
+.navbar {
+        width:80%;
+        padding:0px;
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 20px; /* Added */
+    }
+#t:hover {
+    color:black;
+}
+#t {
+    float:right;
+    font-family: 'InkLipquid'; 
+    font-size:35px;
+    color:gray;
+    opacity:0.8;
+    text-decoration:none;
+}
+
+ @font-face { font-family: 'InkLipquid'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff'); font-weight: normal; font-style: normal; }
+ @font-face { font-family: 'Goyang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Goyang.woff') format('woff'); font-weight: normal; font-style: normal; }
+ @font-face { font-family: 'fromdamiM'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_ten@1.0/fromdamiM.woff') format('woff'); font-weight: normal; font-style: normal; }
+ @font-face { font-family: 'UhBeemysen'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeemysen.woff') format('woff'); font-weight: normal; font-style: normal; }
+ @font-face { font-family: 'SDMiSaeng'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/SDMiSaeng.woff') format('woff'); font-weight: normal; font-style: normal; }
+</style>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+<title>Hyo-Gyeong Blog</title>
+
+</head>
+<body>
+<br><br><br>
+<div class="navbar">
+<span style="font-family: 'InkLipquid'; font-size:35px;">소소한 일상과 비밀일기를 기록하는 블로그</span><br>
+<a id="t" href="{% url 'home' %}">Home</a>
+<a id="t" href="{% url 'list' %}">List</a>
+<a id="t" href="{% url 'new' %}">New</a><br>
+</div>
+
+{% block content %}
+{% endblock %}
+<hr>
+<footer>
+<p>신효경 Likelion 중앙 BLoG 과제</p>
+<a href="">Top</a>
+<br>
+</footer>

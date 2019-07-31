@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<head>
+    <style>
+    .card {
+        margin:auto;
+        width:90%;
+        padding-left:250px;
+    }
+    </style>
+</head>
+
+<div class="card">
+  <div class="card-body">
+  <img src="{{blog_edit.image.url}}" width=500 height=400 name="image"><br><br>
+    <form method="POST" action="{% url 'edit' blog_edit.id %}">
+    {% csrf_token %}
+    제목 : <input type="text" value="{{blog_edit.title}}" name="title"><br>내용 :<br>
+    <textarea name="body" cols="70" rows="15">{{blog_edit.body}}</textarea>
+    <button type="submit">확인</button>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
