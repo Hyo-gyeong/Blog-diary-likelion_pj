@@ -14,3 +14,6 @@ class Blog(models.Model):
     
     def sum(self):
         return self.body[:50]
+
+    class Meta:
+        ordering = ['-id']
