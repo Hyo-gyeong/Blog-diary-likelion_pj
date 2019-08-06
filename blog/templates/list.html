@@ -33,6 +33,12 @@
     </style>
 </head>
 <body>
+        {% if user.is_anonymous %}
+        <script>
+            alert('비밀일기! 로그인이 필요해요!')
+            document.location.href = '/account/signin';
+        </script>
+        {% endif %}
 <br><br>
 {% for blog in posts %}
 <div class="cards">
