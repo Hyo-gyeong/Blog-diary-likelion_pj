@@ -40,7 +40,7 @@ img {
   <div class="card-body">
     <img height="40%"  src="{{blog_detail.image.url}}">
     <p class="title content" style="font-family: 'fromdamiM';">{{blog_detail.title}}<br></p>
-    <p class="body content" style="font-family: 'SDMiSaeng'; font-size:25px;">{{blog_detail.body}}<br></p>
+    <p class="body content" style="font-family: 'SDMiSaeng'; font-size:25px;">{{blog_detail.body|linebreaksbr}}<br></p>
     <p class="date content" style="font-family:'UhBeemysen';">{{blog_detail.pub_date}}</p>
     <a style="float:right; margin-left:20px;" href="{% url 'home' %}">홈으로</a>
     <a style="float:right; margin-left:20px;"  href="{% url 'delete' blog_detail.id %}">삭제하기</a>
